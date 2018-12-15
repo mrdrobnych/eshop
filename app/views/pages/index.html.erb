@@ -1,2 +1,10 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+	<%= link_to "login", user_session_path %>
+<% else %>
+	<%= link_to "logout", destroy_user_session_path, method: :delete %>
+<% end %>
+
+<% @categories.each do |categorie| %>
+	<%= categorie.name %>
+<% end %>
+

@@ -39,6 +39,6 @@ before_action :authenticate_user!
 
 private 
   def categorie_params
-  	params.require(:categorie).permit(:categorie_id, :name,  :photo)
+  	params.require(:categorie).permit(:categorie_id, :name)
   end
 end

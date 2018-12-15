@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
 before_action :authenticate_user!
+
   def new
   	@profile = Profile.new
   end
@@ -38,6 +39,6 @@ before_action :authenticate_user!
 
 private 
   def profile_params
-  	params.require(:profile).permit(:user_id, :nickname, :age, :avatar)
+  	params.require(:profile).permit(:user_id, :name, :phone, :adress)
   end
 end
