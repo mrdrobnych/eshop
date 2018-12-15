@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Сайт створюється для великої мережі магазинів електротоварів
+Технічне завдання:
 
-Things you may want to cover:
+розробити сайт на якому може ->
+переглядати товари
+залишати питання
+залишати коментарі
+виставляти рейтинг
+відправляти форму замовлення
+відповідати на попередні коментарі інших користувачів
+*зареєстрований користувач*
 
-* Ruby version
+Та ->
+переглядати товари та їх рейтинг, коментарі та питання
+*не зареєстрований користувач*
 
-* System dependencies
+Всі товари->
+побиті на категорії 
+мають фото та опис
+мають різні поля для користувачів(комент, оцінка, питання, заявка)
 
-* Configuration
++товари можуть бути додані тільки користувачем з правами адміністратора
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
