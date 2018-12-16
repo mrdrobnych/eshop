@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
-	belongs_to :admin
+	mount_uploaders :images, PhotoUploader
+	serialize :images, JSON # If you use SQLite, add this line.
+
 	belongs_to :categorie
     has_many :posts
-
-    validates :title, :body, presence: true
 end

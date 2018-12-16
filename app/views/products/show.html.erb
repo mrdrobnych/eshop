@@ -1,0 +1,10 @@
+
+	<p>
+		<% @product.images.each do |image| %>
+		   <%= image_tag(image.url, size: "46x46") %>
+		<% end %><br>
+		Product: <%= @product.name %><br>	
+		Price: <%= @product.price %><br>	
+		Description: <%= @product.description %><br>	
+		Count of product: <%= @product.pcount %><br>	
+	</p>
