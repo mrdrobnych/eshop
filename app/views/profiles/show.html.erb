@@ -1,2 +1,5 @@
-<h1>Profile#show</h1>
-<p>Find me in app/views/profile/show.html.erb</p>
+<%= image_tag current_user.profile.avatar_url, size:"19x19" %>   
+<%= current_user.profile.name %><br />
+Phone: <%= current_user.profile.phone%><br />
+Address: <%= current_user.profile.address %><br />
+<%= link_to "edit",  edit_profile_path(current_user.id) %><br />

@@ -1,0 +1,7 @@
+<%= form_for @profile, url: profile_path(current_user.id) do |f| %>
+  Name: <%= f.text_field :name %><br />
+  Phone: <%= f.text_field :phone %><br />
+  Address: <%= f.text_field :address %><br />
+  Avatar: <%= f.file_field :avatar %><br />
+  <%= f.submit "Update" %>
+<% end %>

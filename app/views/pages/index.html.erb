@@ -1,10 +1,14 @@
 <% if !user_signed_in? %>
-	<%= link_to "login", user_session_path %>
+	<%= link_to "Login", user_session_path %>
 <% else %>
-	<%= link_to "logout", destroy_user_session_path, method: :delete %>
+	<%= link_to "My Profile", profile_path(current_user.id) %> | 
+	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% end %>
 
 <% @categories.each do |categorie| %>
-	<%= categorie.name %>
+	<p>
+		<%= image_tag(categorie.photo_url, size: "46x46") %>
+		<span style="font-size: 50px;"><%= link_to categorie.name, category_path(categorie.id) %></span>	
+	</p>
 <% end %>
 
