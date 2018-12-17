@@ -1,9 +1,3 @@
-<% if !user_signed_in? %>
-	<%= link_to "Login", user_session_path %>
-<% else %>
-	<%= link_to "My Profile", profile_path(current_user.id) %> | 
-	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% end %>
 
 <% @categories.each do |categorie| %>
 	<p>

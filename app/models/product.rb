@@ -4,4 +4,5 @@ class Product < ApplicationRecord
 
 	belongs_to :categorie
     has_many :posts
+    has_many :questions
 end

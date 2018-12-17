@@ -1,4 +1,3 @@
-
 	<p>
 		<% @product.images.each do |image| %>
 		   <%= image_tag(image.url, size: "46x46") %>
@@ -8,3 +7,18 @@
 		Description: <%= @product.description %><br>	
 		Count of product: <%= @product.pcount %><br>	
 	</p>
+
+<%= link_to 'write comment', new_product_post_path(@product.id) %> |
+<%= link_to 'write question', new_product_question_path(@product.id) %><br>
+
+----------------------------------<br>
+
+<% @comments.each do |comment| %>
+Comment: <%= comment.body %><br>
+<% end %>
+
+----------------------------------<br>
+
+<% @questions.each do |question| %>
+Question: <%= question.body %><br>
+<% end %>
