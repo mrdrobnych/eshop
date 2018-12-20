@@ -1,0 +1,14 @@
+<% if @orders == [] %>
+
+	<p> You have no orders <p>
+
+<% else %>
+	Your Orders:<br />
+	<% @orders.each do |order| %>
+	    <h2><%= link_to order.product.name, product_path(order.product.id) %></h2>
+		Count: <%= order.ordercount %><br>
+		Comment: <%= order.comment %><br>
+
+		<hr>
+	<% end %>
+<% end %>

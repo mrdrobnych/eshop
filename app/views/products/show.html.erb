@@ -8,8 +8,9 @@
 		Count of product: <%= @product.pcount %><br>	
 	</p>
 
-<%= link_to 'write comment', new_product_post_path(@product.id) %> |
-<%= link_to 'write question', new_product_question_path(@product.id) %><br>
+<%= link_to 'Write comment', new_product_post_path(@product.id) %> |
+<%= link_to 'Write question', new_product_question_path(@product.id) %> |
+<%= link_to 'Order a product', new_product_order_path(@product.id) %><br>
 
 ----------------------------------<br>
 

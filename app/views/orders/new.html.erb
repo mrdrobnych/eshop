@@ -1,0 +1,6 @@
+<%= form_for @order, url: product_orders_path(@product.id) do |f| %>
+  Your Order: <br>
+  Count: <%= f.text_field :ordercount %><br />
+  Comment: <%= f.text_area :comment, size: "30x10" %><br />
+  <%= f.submit "Send" %>
+<% end %>
